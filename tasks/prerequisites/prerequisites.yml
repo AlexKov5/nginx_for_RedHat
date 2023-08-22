@@ -6,7 +6,7 @@
   when:
     - nginx_selinux | bool
     - "'selinux' in ansible_facts"
-    - ansible_facts['os_family'] in ['RedHat', 'Suse']
+    - ansible_facts['os_family'] in ['RedHat']
     - ansible_facts['distribution'] != 'Amazon'
   block:
     - name: Check if SELinux is enabled
